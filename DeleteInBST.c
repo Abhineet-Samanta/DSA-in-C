@@ -22,9 +22,6 @@ Node * delete(Node * root, int value){
     Node * ipre;
     if(root==NULL){
         return NULL;
-    }if(root->left==NULL && root->right==NULL){
-        free(root);
-        return NULL;
     }if(value<root->data){
         root->left=delete(root->left,value);
     }else if(value>root->data){
